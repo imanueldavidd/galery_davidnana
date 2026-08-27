@@ -23,7 +23,7 @@ function App() {
       <LivingSky />
 
       {stage === STAGE.OPENING && (
-        <Opening onOpen={() => setStage(STAGE.LETTER)} recipientName="Van" />
+        <Opening onOpen={() => setStage(STAGE.LETTER)} recipientName="Pan" />
       )}
 
       {stage !== STAGE.OPENING && <MusicPlayer autoPlay={true} />}

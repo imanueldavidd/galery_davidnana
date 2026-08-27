@@ -9,7 +9,7 @@ export default function Gallery({ onFinish }) {
     <div className="relative min-h-screen w-full px-6 py-20">
       <div className="max-w-4xl mx-auto text-center mb-12">
         <p className="font-serif-elegant italic text-dusty-rose-deep text-base md:text-lg mb-2">
-          diabadikan dalam waktu
+          Comingsoon untuk inputnya
         </p>
         <h2 className="font-serif-elegant text-3xl md:text-4xl text-milk-brown-dark">
           Galeri Kenangan Kita
