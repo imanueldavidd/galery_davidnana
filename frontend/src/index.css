@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* === Golden Hour Scrapbook — Design Tokens === */
+@theme {
+  /* Warm neutral base */
+  --color-cream: #FAF6F0;
+  --color-ivory: #F5EDE4;
+  --color-paper: #FFFBF5;
+
+  /* Coklat susu */
+  --color-milk-brown-light: #C8A788;
+  --color-milk-brown: #A9825F;
+  --color-milk-brown-dark: #6E4A2E;
+
+  /* Dusty rose */
+  --color-dusty-rose: #D8ACA0;
+  --color-dusty-rose-deep: #BE8578;
+
+  /* Gold accent */
+  --color-gold: #C9A227;
+  --color-gold-light: #E4C567;
+  --color-gold-soft: #F0DFA8;
+
+  /* Ink for text */
+  --color-ink: #3B2E24;
+  --color-ink-soft: #6B5847;
+
+  --font-serif-elegant: "Playfair Display", "Cormorant Garamond", serif;
+  --font-sans-clean: "Inter", "Manrope", sans-serif;
+  --font-body-warm: "Lora", "Georgia", serif;
+}
+
+@keyframes living-sky {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.living-sky-bg {
+  background-image: linear-gradient(
+    120deg,
+    var(--color-ivory) 0%,
+    var(--color-gold-soft) 30%,
+    var(--color-dusty-rose-deep) 60%,
+    var(--color-milk-brown-light) 80%,
+    var(--color-ivory) 100%
+  );
+  background-size: 400% 400%;
+  animation: living-sky 14s ease-in-out infinite;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans-clean);
+  overscroll-behavior: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-gold-soft);
+  color: var(--color-ink);
+}
+
+/* Custom scrollbar - warm tone */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-milk-brown-light);
+  border-radius: 999px;
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(
+    circle at 50% 45%,
+    transparent 0%,
+    transparent 40%,
+    rgba(110, 74, 46, 0.08) 100%
+  );
+}
